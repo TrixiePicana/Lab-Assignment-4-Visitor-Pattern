@@ -19,7 +19,7 @@ def main():
         print(f"Shipping Cost: ${cost}")
         total_shipping += cost
 
-        print(f"\nTotal Shipping Cost: ${total_shipping}")
+    print(f"\nTotal Shipping Cost: ${total_shipping}")
 if __name__ == "__main__":
     main()
 # This code demonstrates the Visitor Design Pattern in Python.
