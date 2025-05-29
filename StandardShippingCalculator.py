@@ -18,6 +18,6 @@ class StandardShippingCalculator(ShippingCostCalculator):
         return 10 + 0.5 * table.weight # $10 base + $0.5/kg
     
     def visit_sofa(self, sofa):
-        # shippig cost based on volume and distance
+        # shipping cost based on volume and distance
         return 50 + 2 * sofa.volume + 0.1 * sofa.distance
         # 50 is the base cost, 2 is the cost per cubic meter, and 0.1 is the cost per km
