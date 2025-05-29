@@ -1,7 +1,6 @@
 # Concrete Element 2
-from Furniture import Furniture
 
-class Table(Furniture):
+class Table:
     def __init__(self, weight):
         self.weight = weight #in kg
 
