@@ -1,4 +1,6 @@
-# Element Interface
-class Furniture:
+from abc import ABC, abstractmethod
+
+class Furniture(ABC):
+    @abstractmethod
     def accept(self, visitor):
         pass
