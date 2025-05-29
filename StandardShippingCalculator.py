@@ -4,13 +4,20 @@ import ShippingCostCalculator
 
 class StandardShippingCalculator(ShippingCostCalculator):
     def visit_chair(self, chair):
-        print(f"Calculating shipping for Chair made of {chair.material}")
-        return 15.0 # flat rate
+        # Shipping cost based on material
+        if chair.material == "wood":
+            return 20
+        
+        elif chair.material == "metal":
+            return 30
+        else:
+            return 15
     
     def visit_table(self, table):
-        print(f"Calculating shipping for Table with weight {table.weight}kg")
-        return table.weight * 2.0 # $2 per kg
+        # Shipping cost based on weight
+        return 10 + 0.5 * table.weight # $10 base + $0.5/kg
     
     def visit_sofa(self, sofa):
-        print(f"Calculating shipping for Sofa with volume {sofa.volume}m^3 and distance {sofa.distance}km")
-        return (sofa.volume *10) + (sofa.distance * 0.5) # $10/m^3 + $0.5/km
+        # shippig cost based on volume and distance
+        return 50 + 2 * sofa.volume + 0.1 * sofa.distance
+        # 50 is the base cost, 2 is the cost per cubic meter, and 0.1 is the cost per km
