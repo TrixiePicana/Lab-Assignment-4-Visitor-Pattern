@@ -2,7 +2,7 @@
 from Chair import Chair
 from Sofa import Sofa
 from Table import Table
-import StandardShippingCalculator
+from StandardShippingCalculator import StandardShippingCalculator
 
 def main(): 
     furniture_Items = [
