@@ -1,7 +1,6 @@
 # Concrete Element 3
-from Furniture import Furniture
 
-class Sofa(Furniture):
+class Sofa:
     def __init__(self, volume, distance):
         self.volume = volume # in cubic meters
         self.distance = distance # in km
