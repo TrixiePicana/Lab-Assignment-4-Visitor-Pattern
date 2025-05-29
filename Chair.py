@@ -1,7 +1,6 @@
 # Concrete Element 1
-from Furniture import Furniture
 
-class Chair(Furniture):
+class Chair:
     def __init__(self, material):
         self.material = material
 
