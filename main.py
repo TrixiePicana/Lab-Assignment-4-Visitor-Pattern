@@ -1,9 +1,8 @@
 # Client Code
-import Chair
-import Sofa
+from Chair import Chair
+from Sofa import Sofa
+from Table import Table
 import StandardShippingCalculator
-import Table
-
 
 def main(): 
     furniture_Items = [
@@ -21,3 +20,7 @@ def main():
         total_shipping += cost
 
         print(f"\nTotal Shipping Cost: ${total_shipping}")
+if __name__ == "__main__":
+    main()
+# This code demonstrates the Visitor Design Pattern in Python.
+# It calculates shipping costs for different types of furniture items using a visitor class.
